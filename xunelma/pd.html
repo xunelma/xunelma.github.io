@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>登陆</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             background-image: url(https://livefile.xesimg.com/programme/python_assets/a57cf16281d002157a3ddeadc009d07f.jpg);
@@ -41,12 +42,7 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        
-        .forgot-password {
-            text-align: right;
-            margin-bottom: 10px;
-        }
-        
+    
         .social-login {
             text-align: center;
             margin-top: 20px;
@@ -62,7 +58,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>管理员登录--学生证半(站长)专用|闲人莫用</h1>
+        <h1 id="chg">管理员登录--学生证半(站长)专用|闲人莫用</h1>
         <form id="loginForm">
 
 
@@ -101,7 +97,6 @@
     
         </form>
     </div>
-
     <script>
 
 
@@ -124,10 +119,8 @@
 
 
                 // 登录成功，跳转到主页
-
-
-                window.location.href = "./main.html";
-
+                window.open("./main.html")
+                window.close()
 
             } else {
 
@@ -135,8 +128,8 @@
                 // 登录失败，显示错误信息
 
 
-                alert("Invalid username or password");
-
+                alert("密码错误");
+                
 
             }
 
